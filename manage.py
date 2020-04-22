@@ -8,9 +8,6 @@ Pony(app)
 db = Database()
 db.bind(provider='sqlite', filename='database.sqlite', create_db=True)
 
-@app.route('/')
-def hello_world():
-    return 'Hello, World!'
-
+from views import *
 
 db.generate_mapping(create_tables=True)
