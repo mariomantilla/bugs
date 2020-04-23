@@ -8,6 +8,6 @@ Pony(app)
 db = Database()
 db.bind(provider='sqlite', filename='database.sqlite', create_db=True)
 
-from views import *
+import views
 
 db.generate_mapping(create_tables=True)

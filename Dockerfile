@@ -1,6 +1,6 @@
 FROM python:3.7-alpine
-COPY requirements.txt .
+WORKDIR /web
+COPY requirements.txt /web
 RUN pip install -r requirements.txt
-COPY . .
 ENV FLASK_APP=manage.py
 ENV FLASK_ENV=development
